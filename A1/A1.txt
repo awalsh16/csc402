@@ -1,0 +1,16 @@
+## CSC 402 - Assignment 1 - Avery Walsh
+# Question 1: Develop a grammar extended with the appropriate lookahead sets for the rules in the grammar above. Show your extended grammar.
+
+
+prog : ({LPAREN, VAR, NUM} sexp)*
+
+sexp : {LPAREN} LPAREN exp RPAREN
+    | {VAR} VAR
+    | {NUM} NUM
+
+exp : {PLUS} PLUS sexp sexp
+    | {MINUS} MINUS sexp sexp
+    | {MULT} MULT sexp sexp
+    | {DIV} DIV sexp sexp
+    | {STORE} STORE var sexp
+    | {PRINT} PRINT sexp

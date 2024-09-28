@@ -1,5 +1,4 @@
 from sys import stdin
-#aaa
 
 class inputStream:
     def __init__(self, char_stream=None):
