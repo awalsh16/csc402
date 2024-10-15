@@ -1,0 +1,53 @@
+instr_list : {label, print, pop, store, ask, dup, add, sub, mul, div, equ, leq, jumpt, jumpf, jump, stop, noop}(labeled_instr)*
+
+labeled_instr : {label} label_def instr
+    |   {print, pop, store var, ask, dup, add, sub, mul, div, equ, leq, jumpt label, jumpf label, jump label, stop, noop} instr
+
+label_def : {label} label \:
+
+instr : print ;
+    | push arg ;
+    | pop ;
+    | store var ;
+    | ask ;
+    | dup ;
+    | add ;
+    | sub ;
+    | mul ;
+    | div ;
+    | equ ;
+    | leq ;
+    | jumpt label ;
+    | jumpf label ;
+    | jump label ;
+    | stop ;
+    | noop ;
+
+arg : {num} num
+    | {var} var
+
+label : <any valid label name>
+var : <any valid variable name>
+num : <any valid integer number>
+
+
+
+Tokens: label, var, num, arg, isntr, label_def, labeled_instr
+
+
+
+
+STEPS:
+
+TASK - MAKE THE INTERPRETR
+
+1) make stack that you can modify
+2) modify the stak using the commands
+3) make sure that the commandws are runnable from cmd
+
+
+
+push 3; 
+store x;
+push x;
+print;
