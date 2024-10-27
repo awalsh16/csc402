@@ -1,0 +1,9 @@
+    ask "Enter an integer value: ";
+    dup;
+    push 0;
+    leq;
+    jumpt NEG;
+    stop "You entered a positive number";
+NEG:
+    stop "You entered 0 or a negative number";
+    
