@@ -97,7 +97,7 @@ if __name__ == "__main__":
     prgm = \
     '''
     // test
-    getfunny x
+    get funny x
     x = x + 1
     put x
     '''

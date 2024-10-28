@@ -5,6 +5,7 @@ from cuppa1_fe import parse
 from cuppa1_codegen import walk as codegen
 from cuppa1_output import output
 
+
 def cc(input_stream):
 
     try:
